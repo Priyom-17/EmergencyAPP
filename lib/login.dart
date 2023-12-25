@@ -1,6 +1,9 @@
 import 'package:emergency_app/comp/my_button.dart';
 import 'package:emergency_app/comp/my_textfield.dart';
+import 'package:emergency_app/comp/square_tile.dart';
 import 'package:flutter/material.dart';
+
+
 
 class LoginPage extends StatelessWidget {
    LoginPage({super.key});
@@ -93,6 +96,20 @@ class LoginPage extends StatelessWidget {
                         ),
                   ],
                 ),
+                //google and apple image
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    //google button
+                    SquareTile(imagepath: 'images/google.png'),
+
+                    SizedBox(width: 20),
+
+                    //apple image
+                    SquareTile(imagepath: 'images/facebook.png'),
+                  ],
+                ),
+
               
             ]
             ),
