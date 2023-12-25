@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:emergency_app/comp/my_textfield.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -36,40 +37,11 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 20),
 
               //username TextField
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal:20.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey.shade400),
-                    ),
-                    fillColor: Colors.grey.shade300,
-                    filled: true,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 15),
-              //password textfield
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal:20.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey.shade400),
-                    ),
-                    fillColor: Colors.grey.shade300,
-                    filled: true,
-                  ),
-                ),
-              ),
+              MyTextField(),
+
+              //password Textfield
+              MyTextField(),
+              
             ]
             ),
         ),
