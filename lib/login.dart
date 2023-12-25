@@ -8,6 +8,8 @@ class LoginPage extends StatelessWidget {
   final usernameController=TextEditingController();
   final passwordController=TextEditingController();
 
+  void signInUser(){}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,7 +65,34 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                MyButton(),
+                MyButton(
+                  onTap: signInUser,
+                ),
+                const SizedBox(height: 40),
+
+                Row(
+                  children: [
+                    Expanded(
+                      child: Divider(
+                        thickness: 1.2,
+                        color: Colors.grey[600],
+                      ),
+                      ),
+                      Text(
+                        'Or Continue with',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w900
+                        ),
+                        ),
+                      Expanded(
+                        child: Divider(
+                          thickness: 1.2,
+                          color: Colors.grey,
+                        ),
+                        ),
+                  ],
+                ),
               
             ]
             ),
