@@ -24,14 +24,14 @@ class LoginPage extends StatelessWidget {
             children: [
               const SizedBox(height: 10),
               //logo
-              Icon(
+              const Icon(
                Icons.account_circle,
                size: 80, 
 
               ),
               const SizedBox(height: 10),
               //Welcome Text
-              Text(
+              const Text(
                 'Welcome',
                 style: TextStyle(
                   color: Colors.black87,
@@ -62,7 +62,7 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 15),
 
               //forgot password?
-              Text(
+              const Text(
                 'Forgot password?',
                 style: TextStyle(color: Colors.deepOrangeAccent),
                 ),
@@ -88,7 +88,7 @@ class LoginPage extends StatelessWidget {
                           fontWeight: FontWeight.bold
                         ),
                         ),
-                      Expanded(
+                      const Expanded(
                         child: Divider(
                           thickness: 1.2,
                           color: Colors.grey,
@@ -98,9 +98,9 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 30),
                 //google and apple image
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     //google button
                     SquareTile(imagepath: 'images/google.png'),
 
@@ -115,11 +115,11 @@ class LoginPage extends StatelessWidget {
                 
                 //not a member
 
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text('Not a Member?'),
-                    const SizedBox(width: 3),
+                    SizedBox(width: 3),
                     Text(
                       'Register Now',
                       style: TextStyle(
