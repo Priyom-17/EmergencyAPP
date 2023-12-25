@@ -1,3 +1,4 @@
+import 'package:emergency_app/comp/my_button.dart';
 import 'package:emergency_app/comp/my_textfield.dart';
 import 'package:flutter/material.dart';
 
@@ -60,6 +61,9 @@ class LoginPage extends StatelessWidget {
                 'Forgot password?',
                 style: TextStyle(color: Colors.grey[600]),
                 ),
+                const SizedBox(height: 20),
+
+                MyButton(),
               
             ]
             ),
