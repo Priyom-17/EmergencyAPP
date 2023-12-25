@@ -85,7 +85,8 @@ class LoginPage extends StatelessWidget {
                         'Or Continue with',
                         style: TextStyle(
                           color: Colors.grey.shade600,
-                          fontWeight: FontWeight.bold
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20
                         ),
                         ),
                       const Expanded(
@@ -118,13 +119,19 @@ class LoginPage extends StatelessWidget {
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Not a Member?'),
-                    SizedBox(width: 3),
+                    Text(
+                      'Not a Member?',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                      ),
+                    SizedBox(width: 10),
                     Text(
                       'Register Now',
                       style: TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.bold,
+                        fontSize: 20
                       ),
 
                     )
