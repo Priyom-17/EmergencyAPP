@@ -53,6 +53,13 @@ class LoginPage extends StatelessWidget {
                 hintText: 'Password',
                 obsecureText: true,
               ),
+              const SizedBox(height: 15),
+
+              //forgot password?
+              Text(
+                'Forgot password?',
+                style: TextStyle(color: Colors.grey[600]),
+                ),
               
             ]
             ),
