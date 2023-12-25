@@ -13,7 +13,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.grey.shade300,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -23,7 +23,7 @@ class LoginPage extends StatelessWidget {
               //logo
               Icon(
                Icons.account_circle,
-               size: 60, 
+               size: 80, 
 
               ),
               const SizedBox(height: 10),
@@ -32,7 +32,7 @@ class LoginPage extends StatelessWidget {
                 'Welcome',
                 style: TextStyle(
                   color: Colors.black87,
-                  fontSize: 18,
+                  fontSize: 28,
                   fontWeight: FontWeight.w800,
 
                 ),
@@ -61,7 +61,7 @@ class LoginPage extends StatelessWidget {
               //forgot password?
               Text(
                 'Forgot password?',
-                style: TextStyle(color: Colors.grey[600]),
+                style: TextStyle(color: Colors.deepOrangeAccent),
                 ),
                 const SizedBox(height: 20),
 
@@ -81,8 +81,8 @@ class LoginPage extends StatelessWidget {
                       Text(
                         'Or Continue with',
                         style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w900
+                          color: Colors.grey.shade600,
+                          fontWeight: FontWeight.bold
                         ),
                         ),
                       Expanded(
