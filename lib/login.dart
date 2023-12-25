@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -17,7 +19,18 @@ class LoginPage extends StatelessWidget {
               Icon(
                Icons.account_circle,
                size: 60, 
-               
+
+              ),
+              const SizedBox(height: 10),
+              //Welcome Text
+              Text(
+                'Welcome',
+                style: TextStyle(
+                  color: Colors.black87,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w800,
+
+                ),
               )
             ]
             ),
