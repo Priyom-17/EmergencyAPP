@@ -12,7 +12,7 @@ class LoginPage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            //mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 10),
               //logo
@@ -31,7 +31,12 @@ class LoginPage extends StatelessWidget {
                   fontWeight: FontWeight.w800,
 
                 ),
-              )
+              ),
+
+              const SizedBox(height: 20),
+
+              //TextField
+              TextField()
             ]
             ),
         ),
