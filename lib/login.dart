@@ -5,6 +5,24 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.grey[300],
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(height: 10),
+              //logo
+              Icon(
+               Icons.account_circle,
+               size: 60, 
+               
+              )
+            ]
+            ),
+        ),
+      ),
+    );
   }
 }
