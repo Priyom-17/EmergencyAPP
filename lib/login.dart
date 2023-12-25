@@ -96,6 +96,7 @@ class LoginPage extends StatelessWidget {
                         ),
                   ],
                 ),
+                const SizedBox(height: 30),
                 //google and apple image
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
