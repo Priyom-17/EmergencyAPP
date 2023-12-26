@@ -1,6 +1,7 @@
 import 'package:emergency_app/comp/my_button.dart';
 import 'package:emergency_app/comp/my_textfield.dart';
 import 'package:emergency_app/comp/square_tile.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 
@@ -11,7 +12,12 @@ class LoginPage extends StatelessWidget {
   final usernameController=TextEditingController();
   final passwordController=TextEditingController();
 
-  void signInUser(){}
+  void signInUser() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: usernameController.text, 
+      password: passwordController.text,
+      );
+  }
 
   @override
   Widget build(BuildContext context) {
