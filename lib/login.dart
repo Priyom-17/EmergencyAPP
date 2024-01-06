@@ -6,13 +6,33 @@ import 'package:flutter/material.dart';
 
 
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
    LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final usernameController=TextEditingController();
+
   final passwordController=TextEditingController();
 
   void signInUser() async {
+
+    //show loading circle
+    showDialog(
+      context: context, 
+      builder: (context) {
+        return const Center(
+          child: CircularProgressIndicator(),
+        );
+
+      },
+      );
+
+
+    //try sign in
     await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: usernameController.text, 
       password: passwordController.text,
@@ -81,6 +101,10 @@ class LoginPage extends StatelessWidget {
                 MyButton(
                   onTap: signInUser,
                 ),
+                /*ElevatedButton(onPressed: (){
+                  signInUser();
+                }, 
+                child: Text("Login")),*/
                 const SizedBox(height: 40),
 
                 Row(
