@@ -21,6 +21,8 @@ class _RegisterPageState extends State<RegisterPage> {
 
   final passwordController=TextEditingController();
 
+  final confirmpasswordController=TextEditingController();
+
   void signUpUser() async {
 
     //show loading circle
@@ -37,10 +39,15 @@ class _RegisterPageState extends State<RegisterPage> {
 
     //try sign in
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: usernameController.text, 
-      password: passwordController.text,
-      );
+      if (passwordController.text == confirmpasswordController.text) {
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: usernameController.text, 
+        password: passwordController.text,
+       );
+      }
+      else {
+        showErrorMessage("Passwords don't match");
+      }
       //pop navigator
       Navigator.pop(context);
     } on FirebaseAuthException catch(e) {
@@ -123,7 +130,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
                 //password Textfield
                 MyTextField(
-                  controller: passwordController,
+                  controller: confirmpasswordController,
                   hintText: 'Cofirm Password',
                   obsecureText: true,
                 ),
