@@ -135,15 +135,6 @@ class _RegisterPageState extends State<RegisterPage> {
                   obsecureText: true,
                 ),
             
-                //forgot password?
-                const Text(
-                  'Forgot password?',
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 4, 102, 84),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15
-                    ),
-                  ),
                   const SizedBox(height: 20),
             
                   MyButton(
