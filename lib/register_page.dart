@@ -103,7 +103,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   style: TextStyle(
                     color: Color.fromARGB(221, 13, 37, 216),
                     fontSize: 28,
-                    fontWeight: FontWeight.w800,
+                    
             
                   ),
                 ),
