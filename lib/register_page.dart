@@ -37,7 +37,7 @@ class _RegisterPageState extends State<RegisterPage> {
       );
 
 
-    //try sign in
+    //sign up
     try {
       if (passwordController.text == confirmpasswordController.text) {
         await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -46,14 +46,15 @@ class _RegisterPageState extends State<RegisterPage> {
        );
       }
       else {
-        showErrorMessage("Passwords don't match");
+        showErrorMessage("Passwords dont match");
       }
-      //pop navigator
-      Navigator.pop(context);
+      
     } on FirebaseAuthException catch(e) {
       //pop navigator
+      
       Navigator.pop(context);
       showErrorMessage(e.code);
+      
     }
     
   }
@@ -101,8 +102,8 @@ class _RegisterPageState extends State<RegisterPage> {
                 const Text(
                   'Lets Create a Account for you',
                   style: TextStyle(
-                    color: Color.fromARGB(221, 13, 37, 216),
-                    fontSize: 28,
+                    color: Colors.grey,
+                    fontSize: 26,
                     
             
                   ),
