@@ -1,6 +1,7 @@
 import 'package:emergency_app/comp/my_button.dart';
 import 'package:emergency_app/comp/my_textfield.dart';
 import 'package:emergency_app/comp/square_tile.dart';
+import 'package:emergency_app/services/auth_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 // ignore: unused_import
@@ -174,16 +175,22 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   const SizedBox(height: 30),
                   //google and apple image
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       //google button
-                      SquareTile(imagepath: 'images/google.png'),
+                      SquareTile(
+                        onTap: () =>AuthService().signInWithGoogle(),
+                        imagepath: 'images/google.png'
+                        ),
             
                       SizedBox(width: 20),
             
                       //apple image
-                      SquareTile(imagepath: 'images/facebook.png'),
+                      SquareTile(
+                        onTap: () {},
+                        imagepath: 'images/facebook.png'
+                        ),
                     ],
                   ),
             
